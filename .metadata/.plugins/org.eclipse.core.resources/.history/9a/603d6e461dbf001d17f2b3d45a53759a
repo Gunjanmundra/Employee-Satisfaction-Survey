@@ -1,0 +1,2 @@
+server.session.timeout=10000        
+server.session.cookie.max-age=10000

@@ -1,0 +1,14 @@
+
+
+java:S1104"YMake benefitRadio1 a static final constant or non-public and provide accessors if needed.(¼è†Œûÿÿÿÿ8üšÚ¬ì0HRMINORZ
+CODE_SMELL
+–
+java:S1104"_Make benefitButtonToggle a static final constant or non-public and provide accessors if needed.(öö°üÿÿÿÿ8üšÚ¬ì0HRMINORZ
+CODE_SMELL
+‹
+java:S1104	"YMake benefitRadio2 a static final constant or non-public and provide accessors if needed.( ‘Øš8üšÚ¬ì0HRMINORZ
+CODE_SMELL
+‹
+java:S1104
+"YMake benefitSlider a static final constant or non-public and provide accessors if needed.(ËŸâç8üšÚ¬ì0HRMINORZ
+CODE_SMELL

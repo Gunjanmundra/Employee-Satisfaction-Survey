@@ -1,0 +1,20 @@
+
+‘
+java:S1104
+"YMake envTotalValue a static final constant or non-public and provide accessors if needed.(ëˆÎÓüÿÿÿÿ8Ä”â³ì0HñRMINORZ
+CODE_SMELL
+
+java:S1104"[Make workEnvironment a static final constant or non-public and provide accessors if needed.(Š¦Ø8¶ËŞ³ì0HìRMINORZ
+CODE_SMELL
+•
+java:S1104	"]Make careerDevelopment a static final constant or non-public and provide accessors if needed.(º§½¶şÿÿÿÿ8Ä”â³ì0HğRMINORZ
+CODE_SMELL
+›
+java:S1104"cMake benefitsAndCompensation a static final constant or non-public and provide accessors if needed.(«¾û±üÿÿÿÿ8Ä”â³ì0HïRMINORZ
+CODE_SMELL
+”
+java:S1104"\Make careerTotalValue a static final constant or non-public and provide accessors if needed.(òÎÈüûÿÿÿÿ8Ä”â³ì0HóRMINORZ
+CODE_SMELL
+
+java:S1104"]Make benefitTotalValue a static final constant or non-public and provide accessors if needed.(©Ü¥÷8Ä”â³ì0HòRMINORZ
+CODE_SMELL

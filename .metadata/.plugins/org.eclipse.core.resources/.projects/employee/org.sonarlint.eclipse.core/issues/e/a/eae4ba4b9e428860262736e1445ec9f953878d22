@@ -1,0 +1,10 @@
+
+
+java:S1104"^Make careerButtonToggle a static final constant or non-public and provide accessors if needed.(¥Š¹‹8ÒíÜ¬ì0HRMINORZ
+CODE_SMELL
+
+java:S1104	"XMake careerRadio2 a static final constant or non-public and provide accessors if needed.(‚º÷Öüÿÿÿÿ8ÒíÜ¬ì0HRMINORZ
+CODE_SMELL
+
+java:S1104"XMake careerRadio1 a static final constant or non-public and provide accessors if needed.(ºï€²ùÿÿÿÿ8ÒíÜ¬ì0HRMINORZ
+CODE_SMELL

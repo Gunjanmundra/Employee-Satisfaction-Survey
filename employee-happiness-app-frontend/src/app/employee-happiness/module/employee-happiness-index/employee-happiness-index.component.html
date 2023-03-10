@@ -1,0 +1,125 @@
+<mat-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>
+                Work Environment
+            </ng-template>
+            <div class="large-box">
+                <h5>1. Do you believe your current work environment allows you to complete your work in an effective manner?</h5>
+                <mat-radio-group aria-labelledby="radio-group-label" class="group" [formGroup]="firstFormGroup" [formControlName]="employeeHappinessControl.envRadio.key">
+                    <mat-radio-button *ngFor="let radioOption of radioOptions" [value]="radioOption.value">
+                        {{radioOption.key}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="large-box">
+                <h5>2. How often do you feel stressed at work?</h5>
+                <mat-button-toggle-group [formGroup]="firstFormGroup" class="group" aria-label="Font Style" [formControlName]="employeeHappinessControl.envButtonToggle.key">
+                    <mat-button-toggle *ngFor="let buttonToggleOption of buttonToggleOptions2" [value]="buttonToggleOption.value" class="flex-item">
+                        {{buttonToggleOption.key}}
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+            <div class="large-box">
+                <h5>3. On scale 1 to 10, how would you rate your work-life balance?</h5>
+                <mat-slider [min]="employeeHappinessControl.envSlider1.min" [max]="employeeHappinessControl.envSlider1.max" step="1" showTickMarks thumbLabel [formGroup]="firstFormGroup" [formControlName]="employeeHappinessControl.envSlider1.key">
+                    <input matSliderThumb>
+                </mat-slider>
+            </div>
+            <div class="large-box">
+                <h5>4. On scale 1 to 10, how satisfied are you with your current job?</h5>
+                <mat-slider [min]="employeeHappinessControl.envSlider2.min" [max]="employeeHappinessControl.envSlider2.max" showTickMarks thumbLabel [formGroup]="firstFormGroup" [formControlName]="employeeHappinessControl.envSlider2.key">
+                    <input matSliderThumb>
+                </mat-slider>
+            </div>
+            <div class="large-box">
+                <mat-error *ngIf="firstFormGroup.invalid && firstNextBtnClicked"> All fields are required </mat-error>
+            </div>
+            <div class="large-box">
+                <button mat-raised-button matStepperNext color="accent" class="floatRight" (click)="onClickNext('first')">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <ng-template matStepLabel>
+            Benefits and compensation
+        </ng-template>
+        <form [formGroup]="secondFormGroup">
+            <div class="large-box">
+                <h5>1. Are you satisfied with the present benefits that the corporate offers, above your salary?</h5>
+                <mat-radio-group aria-labelledby="radio-group-label" class="group" [formGroup]="secondFormGroup" [formControlName]="employeeHappinessControl.benefitRadio1.key">
+                    <mat-radio-button *ngFor="let radioOption of radioOptions" [value]="radioOption.value">
+                        {{radioOption.key}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="large-box">
+                <h5>2. How satisfied are you with your current salary?</h5>
+                <mat-button-toggle-group [formGroup]="secondFormGroup" class="group" aria-label="Font Style" [formControlName]="employeeHappinessControl.benefitButtonToggle.key">
+                    <mat-button-toggle *ngFor="let buttonToggleOption of buttonToggleOptions1" [value]="buttonToggleOption.value" class="flex-item">
+                        {{buttonToggleOption.key}}
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+            <div class="large-box">
+                <h5>3. Does your benefits package meet your (and/or your family's) needs?</h5>
+                <mat-radio-group aria-labelledby="radio-group-label" class="group" [formGroup]="secondFormGroup" [formControlName]="employeeHappinessControl.benefitRadio2.key">
+                    <mat-radio-button *ngFor="let radioOption of radioOptions" [value]="radioOption.value">
+                        {{radioOption.key}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="large-box">
+                <h5>4. On scale 1 to 10, How satisfied with the organization's benefits package?</h5>
+                <mat-slider [min]="employeeHappinessControl.benefitSlider.min" [max]="employeeHappinessControl.benefitSlider.max" step="1" showTickMarks thumbLabel [formGroup]="secondFormGroup" [formControlName]="employeeHappinessControl.benefitSlider.key">
+                    <input matSliderThumb>
+                </mat-slider>
+            </div>
+            <div class="large-box">
+                <mat-error *ngIf="secondFormGroup.invalid && secondNextBtnClicked"> All fields are required </mat-error>
+            </div>
+            <div class="large-box">
+                <button mat-raised-button matStepperPrevious color="accent" class="floatLeft">Back</button>
+                <button mat-raised-button matStepperNext color="accent" class="floatRight" (click)="onClickNext('second')">Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>
+            Career development
+        </ng-template>
+        <form [formGroup]="thirdFormGroup">
+            <div class="large-box">
+                <h5>1. Do you feel your company may be a good place for your self-development and your career enhancement?</h5>
+                <mat-radio-group aria-labelledby="radio-group-label" class="group" [formGroup]="thirdFormGroup" [formControlName]="employeeHappinessControl.careerRadio1.key">
+                    <mat-radio-button *ngFor="let radioOption of radioOptions" [value]="radioOption.value">
+                        {{radioOption.key}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="large-box">
+                <h5>2. How satisfied are you with the career development and training programs provided by your company?</h5>
+                <mat-button-toggle-group [formGroup]="thirdFormGroup" class="group" aria-label="Font Style" [formControlName]="employeeHappinessControl.careerButtonToggle.key">
+                    <mat-button-toggle *ngFor="let buttonToggleOption of buttonToggleOptions1" [value]="buttonToggleOption.value" class="flex-item">
+                        {{buttonToggleOption.key}}
+                    </mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+            <div class="large-box">
+                <h5>3. Do you feel that you are growing professionally?</h5>
+                <mat-radio-group aria-labelledby="radio-group-label" class="group" [formGroup]="thirdFormGroup" [formControlName]="employeeHappinessControl.careerRadio2.key">
+                    <mat-radio-button *ngFor="let radioOption of radioOptions" [value]="radioOption.value">
+                        {{radioOption.key}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="large-box">
+                <mat-error *ngIf="thirdFormGroup.invalid && thirdNextBtnClicked"> All fields are required </mat-error>
+            </div>
+            <div class="large-box">
+                <button mat-raised-button matStepperPrevious color="accent" class="floatLeft">Back</button>
+                <button mat-raised-button matStepperNext color="accent" class="floatRight" (click)="onClickSubmit()">Submit</button>
+            </div>
+        </form>
+    </mat-step>
+</mat-stepper>

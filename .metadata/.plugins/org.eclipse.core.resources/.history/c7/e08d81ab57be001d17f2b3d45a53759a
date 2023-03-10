@@ -1,0 +1,8 @@
+package com.example.employee.model;
+
+public class WorkEnvironment {
+	public int envRadio;
+	public int envButtonToggle;
+	public int envSlider1;
+	public int envSlider2;
+}
